@@ -10,7 +10,7 @@ const db = new sqlite3.Database('./gold_medals.sqlite');
 const app = express();
 app.use(cors());
 
-app.use(express.static('public'));
+app.use(express.static('Public'));
 
 const lowerCaseObjectKeys = (questionableKeys) => {
   // Valid SQL commands are case-insensitive, but JavaScript is case-sensitive
