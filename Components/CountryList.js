@@ -36,7 +36,7 @@ class CountryList extends React.Component {
       return (
         <tr key={index}>
           <td className="country-link"><Link to={`/country/${country.name}`}>{country.name}</Link></td>
-          <td>{country.gdp}</td>
+          <td>{Math.round(country.gdp)}</td>
           <td>{country.population}</td>
           <td>{country.medals}</td>
         </tr>

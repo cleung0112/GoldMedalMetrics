@@ -56,7 +56,7 @@ class CountryDetail extends React.Component {
               <td className="table-descriptor">POPULATION</td>
             </tr>
             <tr>
-              <td className="table-value">{this.state.countryDetails.gdp}</td>
+              <td className="table-value">{Math.round(this.state.countryDetails.gdp)}</td>
               <td className="table-value">{this.state.countryDetails.numberMedals}</td>
               <td className="table-value">{this.state.countryDetails.population}</td>
             </tr>
