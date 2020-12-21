@@ -309,7 +309,7 @@ app.get('/country/:countryName/sports', (req, res, next) => {
   }
 });
 
-app.listen(process.env.PORT || 5001, () => {
+app.listen(process.env.PORT || 3001, () => {
   let errorThrown = false;
   db.serialize(() => {
     // Drop the tables if they exist

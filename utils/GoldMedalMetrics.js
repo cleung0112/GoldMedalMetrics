@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
 
 const GoldMedalMetrics = {};
-const baseUrl = 'http://localhost:3001';
+const baseUrl = '/';
 
 GoldMedalMetrics.fixName = countryName => {
   return countryName.replace(/\w\S*/g, txt => {return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
