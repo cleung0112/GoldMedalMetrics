@@ -5960,7 +5960,7 @@ Object.defineProperty(exports, "__esModule", {
 __webpack_require__(228);
 
 var GoldMedalMetrics = {};
-var baseUrl = 'http://localhost:3001';
+var baseUrl = '/';
 
 GoldMedalMetrics.fixName = function (countryName) {
   return countryName.replace(/\w\S*/g, function (txt) {

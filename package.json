@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha",
     "webpack": "webpack",
+    "build": "webpack --config webpack.config.js",
     "start": "node server.js"
   },
   "author": "",
@@ -17,7 +18,8 @@
     "babel-preset-react": "^6.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "webpack-cli": "^4.2.0"
   },
   "dependencies": {
     "chai": "^4.1.2",
