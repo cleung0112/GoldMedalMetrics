@@ -44,9 +44,10 @@ class Sports extends React.Component {
 
     return this.state.sports.map(sport => {
       return (
-        <tr key={sport.sportName}><td>{sport.sportName}</td>
-        <td>{sport.numberMedals}</td>
-        <td>{sport.percentageWins}%</td>
+        <tr key={sport.sportName}>
+          <td>{sport.sportName}</td>
+          <td>{sport.numberMedals}</td>
+          <td>{sport.percentageWins}</td>
         </tr>
       );
     });
@@ -54,27 +55,28 @@ class Sports extends React.Component {
 
   render() {
     return (
-    <div>
-      <h2 className="subheader">SPORTS</h2>
-      <table className="country-table">
-        <tbody>
-        <tr className="table-header country-header">
-          <th>SPORT NAME
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('sport', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('sport', false)} />
-          </th>
-          <th># OF GOLD MEDALS WON
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('count', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('count', false)} />
-          </th>
-          <th>% OF GOLD MEDAL WINS
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('percent', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('percent', false)} />
-          </th>
-        </tr>
-        {this.renderSportRows()}
-        </tbody>
-      </table>
+      <div>
+        <h2 className="subheader">SPORTS</h2>
+
+        <table className="country-table">
+          <tbody>
+            <tr className="table-header country-header">
+              <th>SPORT NAME
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('sport', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('sport', false)} />
+              </th>
+              <th># OF GOLD MEDALS WON
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('count', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('count', false)} />
+              </th>
+              <th>% OF GOLD MEDAL WINS
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('percent', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('percent', false)} />
+              </th>
+            </tr>
+            {this.renderSportRows()}
+          </tbody>
+        </table>
       </div>
     );
   }

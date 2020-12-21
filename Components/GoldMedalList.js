@@ -45,11 +45,11 @@ class GoldMedalList extends React.Component {
     return this.state.medals.map((medal, index) => {
       return (
         <tr key={index}>
-        <td>{medal.year}</td>
-        <td>{medal.season}</td>
-        <td>{medal.city}</td>
-        <td>{medal.name}</td>
-        <td>{medal.event}</td>
+          <td>{medal.year}</td>
+          <td>{medal.season}</td>
+          <td>{medal.city}</td>
+          <td>{medal.name}</td>
+          <td>{medal.event}</td>
         </tr>
       );
     });
@@ -57,35 +57,36 @@ class GoldMedalList extends React.Component {
 
   render() {
     return (
-    <div>
-      <h2 className="subheader">GOLD MEDAL LIST</h2>
-      <table className="gold-medal-table">
-        <tbody>
-        <tr className="table-header country-header">
-          <th>YEAR WON
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('year', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('year', false)} />
-          </th>
-          <th>SEASON
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('season', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('season', false)} />
-          </th>
-          <th>CITY
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('city', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('city', false)} />
-          </th>
-          <th>MEDAL WINNER NAME
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('name', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('name', false)} />
-          </th>
-          <th>EVENT
-            <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('event', true)}/>
-            <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('event', false)} />
-          </th>
-        </tr>
-        {this.renderMedalRows()}
-        </tbody>
-      </table>
+      <div>
+        <h2 className="subheader">GOLD MEDAL LIST</h2>
+
+        <table className="gold-medal-table">
+          <tbody>
+            <tr className="table-header country-header">
+              <th>YEAR WON
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('year', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('year', false)} />
+              </th>
+              <th>SEASON
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('season', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('season', false)} />
+              </th>
+              <th>CITY
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('city', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('city', false)} />
+              </th>
+              <th>MEDAL WINNER NAME
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('name', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('name', false)} />
+              </th>
+              <th>EVENT
+                <img className="sort" alt="Sort Ascending" src="img/up.svg" onClick={() => this.sortBy('event', true)} />
+                <img className="sort" alt="Sort Descending" src="img/down.svg" onClick={() => this.sortBy('event', false)} />
+              </th>
+            </tr>
+            {this.renderMedalRows()}
+          </tbody>
+        </table>
       </div>
     );
   }
