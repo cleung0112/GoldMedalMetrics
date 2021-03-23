@@ -8,3 +8,5 @@ Olympic Medal is a web search application that allows users to :
 - View a list of every Olympic win a country has with the year, season, winner name, city, and event.
 - Sort the list of Olympic wins by any of these attributes.
 
+<img src='http://g.recordit.co/zdtDGQcXzM.gif' alt='Olympic Medal Search Application Demo'>
+
