@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.static('Public'));
 
 const lowerCaseObjectKeys = (questionableKeys) => {
-  // Valid SQL commands are case-insensitive, but JavaScript is case-sensitive
   let lowerCaseKeys = {};
   for (const prop in questionableKeys) {
     if (prop.toLowerCase().indexOf('count') !== -1) {
@@ -26,7 +25,6 @@ const lowerCaseObjectKeys = (questionableKeys) => {
 };
 
 const fixCountryName = countryName => {
-  // Fixes case for country names
   return countryName.replace(/\w\S*/g, txt => {return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 };
 
